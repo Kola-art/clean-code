@@ -3,6 +3,7 @@
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
+  box-sizing:border-box;
 }
 header {
   width: 500px;
@@ -22,7 +23,7 @@ header {
   text-align: center;
 }
 }
-.centered-main-page-element {
+.container {
   display: block;
   width: 500px;
   margin: 0 auto 0;
