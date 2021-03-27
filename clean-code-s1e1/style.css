@@ -17,11 +17,12 @@ header .main-image {
 .link-info {
   font-family: fantasy, cursive;
 }
-
 @media (max-width:768px) {
-header { 
-  text-align: center;
-}
+
+  header { 
+    text-align: center;
+  }
+
 }
 .container {
   display: block;
@@ -89,7 +90,6 @@ button {
 .scale:focus {
   color: #333;
 }
-
 /* New Task */
 #new-task {
   width: 318px;
@@ -97,7 +97,6 @@ button {
 .btn-add:hover {
   color: #0fc57c;
 }
-
 /* Task list */
 .item-style{
   overflow: hidden;
@@ -108,7 +107,6 @@ button {
   align-items: center;
   vertical-align: middle;
 }
-
 .item-style .check-input {
   margin: 0 10px;
 }
@@ -118,7 +116,6 @@ button {
   font-size: 18px;
   width: 226px;
 }
-
 .item-style .btn-delete:hover {
   color: #cf2323;
 }
@@ -130,23 +127,19 @@ button {
 .img-del:hover {
   transform: rotateZ(0);
 }
-
 /* Completed */
 .line {
   text-decoration: line-through;
   color: #888;
 }
-
 /* Edit Task */
 .item-style .scale {
   display:none
 }
-
 .item-style.edit-mode .scale {
   display:inline-block;
   width:224px
 }
-
 .item-style.edit-mode .item-label {
   display:none;
 }
