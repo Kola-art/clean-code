@@ -57,7 +57,7 @@ var createNewTaskElement=function(taskString){
     listItem.appendChild(editInput);
     listItem.appendChild(editButton);
     listItem.appendChild(deleteButton);
-    listItem.classList.add("item-style");
+    listItem.classList.add("container__list_item");
     return listItem;
 }
 
@@ -89,7 +89,7 @@ var editTask=function(){
     var editInput=listItem.querySelector("input[type=text]");
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".btn-edit");
-    var containsClass=listItem.classList.contains("edit-mode");
+    var containsClass=listItem.classList.contains("container__list_item_edit");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -104,7 +104,7 @@ var editTask=function(){
 
     //toggle .editmode on the parent.
    
-    listItem.classList.toggle("edit-mode");
+    listItem.classList.toggle("container__list_item_edit");
 };
 
 
