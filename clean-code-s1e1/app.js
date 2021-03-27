@@ -33,18 +33,21 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className="task";
+    label.className="task item-label";
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className = "check-input";
     editInput.type="text";
-    editInput.className="task";
+    editInput.className="task scale";
+   
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="btn-edit";
 
     deleteButton.className="btn-delete";
     deleteButtonImg.src="./remove.svg";
+    deleteButtonImg.className="img-del";
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -54,6 +57,7 @@ var createNewTaskElement=function(taskString){
     listItem.appendChild(editInput);
     listItem.appendChild(editButton);
     listItem.appendChild(deleteButton);
+    listItem.classList.add("item-style");
     return listItem;
 }
 
@@ -99,6 +103,7 @@ var editTask=function(){
     }
 
     //toggle .editmode on the parent.
+   
     listItem.classList.toggle("edit-mode");
 };
 
@@ -118,12 +123,13 @@ var deleteTask=function(){
 //Mark task completed
 var taskCompleted=function(){
     console.log("Complete Task...");
-
+    
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
     completedTasksHolder.appendChild(listItem);
+    completedTasksHolder.classList.add("line");
     bindTaskEvents(listItem, taskIncomplete);
-
+   
 }
 
 
@@ -135,6 +141,7 @@ var taskIncomplete=function(){
     var listItem=this.parentNode;
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
+    
 }
 
 
@@ -158,8 +165,9 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
     var editButton=taskListItem.querySelector("button.btn-edit");
     var deleteButton=taskListItem.querySelector("button.btn-delete");
-
-
+    
+    
+   
     //Bind editTask to edit button.
     editButton.onclick=editTask;
     //Bind deleteTask to delete button.
