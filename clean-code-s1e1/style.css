@@ -88,7 +88,7 @@ button {
   color: #333;
 }
 /* New Task */
-.container__add_item{
+.container__add_item {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -120,9 +120,6 @@ button {
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
-}
-.btn-delete:hover {
-  color: #cf2323;
 }
 .img-del {
   height: 2em;
